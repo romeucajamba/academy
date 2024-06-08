@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "api de academia atleética para cadastro de clientes próximos e gestão",
   "main": "index.js",
-  
   "scripts": {
-    "test": "vitest",
     "server": "tsx watch src/server.ts",
     "build": "tsup src --out-dir build",
     "start": "node build/server.js"
@@ -27,6 +25,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "dotenv": "16.4.5",
     "fastify": "^4.27.0"
   }
 }
