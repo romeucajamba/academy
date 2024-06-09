@@ -13,7 +13,7 @@ const _env = schemaEnv.safeParse(process.env)
 if (_env.success == false){
     console.error('Variáveis de ambient inválida', _env.error.format())
 
-    throw new BadRequestError('Variáveis de ambient inválida')
+    throw new BadRequestError('Variáveis de ambients inválida')
 }
 
 export const env = _env.data
