@@ -1,6 +1,6 @@
 import 'dotenv';
 import { z } from 'zod';
-import { BadRequestError} from '../error/badrequest';
+import { BadError } from '../error/error';
 
 
 const schemaEnv = z.object({
@@ -13,7 +13,7 @@ const _env = schemaEnv.safeParse(process.env)
 if (_env.success == false){
     console.error('Variáveis de ambient inválida', _env.error.format())
 
-    throw new BadRequestError('Variáveis de ambients inválida')
+    throw new BadError('Variáveis de ambients inválida')
 }
 
 export const env = _env.data
