@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { FastifyRequest, FastifyReply  } from 'fastify';
 import { RegisterUsecase } from '../useCase/registerUseCase';
-import { UserPrismaRepository } from '../repository/userRepositoryPrisma/userprismarepository';
+import { UserPrismaRepository } from '../../repository/userRepositoryPrisma/userprismarepository';
 import { hash } from 'bcryptjs';
 
 export async function  registerUser(request:FastifyRequest, reply:FastifyReply) {
@@ -28,7 +28,7 @@ export async function  registerUser(request:FastifyRequest, reply:FastifyReply) 
         })
         
     } catch (error) {
-        
+        return reply.status(409).send()
     }
 
    
