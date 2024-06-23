@@ -18,7 +18,7 @@ export class RegisterUsecase {
         const surchForEmail = await this.createUser.findByEmail(email)
 
         if(surchForEmail){
-            throw new EmailAlreadyExist()
+            throw new EmailAlreadyExist('email já cadastrado na plataforma')
         }
 
         await this.createUser.register({
