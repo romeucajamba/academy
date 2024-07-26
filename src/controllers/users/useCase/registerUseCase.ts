@@ -1,10 +1,7 @@
 
-import { RepositoryUserData } from '../../interfaces/registerUserInterface';
-import { UserRepository } from '../../interfaces/repositoryInterface';
-import { EmailAlreadyExist } from '../../error/error';
-
-
-
+import { RepositoryUserData } from '../../../interfaces/registerUserInterface';
+import { UserRepository } from '../../../interfaces/repositoryInterface';
+import { EmailAlreadyExist } from '../../../error/error';
 
 export class RegisterUsecase {
     constructor(private createUser:UserRepository){}

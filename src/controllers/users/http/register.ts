@@ -1,9 +1,9 @@
 import { z } from 'zod';
 import { FastifyRequest, FastifyReply  } from 'fastify';
 import { RegisterUsecase } from '../useCase/registerUseCase';
-import { UserPrismaRepository } from '../../repository/userRepositoryPrisma/userprismarepository';
+import { UserPrismaRepository } from '../../../repository/userRepositoryPrisma/userprismarepository';
 import { hash } from 'bcryptjs';
-import { EmailAlreadyExist } from '../../error/error';
+import { EmailAlreadyExist } from '../../../error/error';
 
 export async function  registerUser(request:FastifyRequest, reply:FastifyReply) {
 
@@ -28,11 +28,11 @@ export async function  registerUser(request:FastifyRequest, reply:FastifyReply) 
             password_hash
         })
 
-        return reply.status(201).send()
+        return reply.status(201).send();
 
     } catch (err) {
         if(err instanceof EmailAlreadyExist){
-            return reply.status(409).send({message:'e-mail já cadastrado!'})
+            return reply.status(409).send({message: err.message})
         }
         throw err
     }

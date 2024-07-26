@@ -1,5 +1,5 @@
 import fastify from "fastify";
-import { CreateUsers } from './routes/POST/createUser';
+import { CreateUsers } from './routes/POST/createUser.routes';
 import { ZodError } from "zod";
 import { env } from "./env";
 
