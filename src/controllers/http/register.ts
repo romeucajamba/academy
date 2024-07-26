@@ -22,7 +22,7 @@ export async function  registerUser(request:FastifyRequest, reply:FastifyReply) 
         const prismaRepositoryUser = new UserPrismaRepository()
         const userUsecase = new RegisterUsecase(prismaRepositoryUser)
 
-        userUsecase.repositoryData({
+        userUsecase.execute({
             name,
             email, 
             password_hash

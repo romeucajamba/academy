@@ -9,7 +9,7 @@ import { EmailAlreadyExist } from '../../error/error';
 export class RegisterUsecase {
     constructor(private createUser:UserRepository){}
 
-    async repositoryData({
+    async execute({
         name,
         email, 
         password_hash
