@@ -1,6 +1,6 @@
 
-import { RepositoryUserData } from '../../../interfaces/registerUserInterface';
-import { UserRepository } from '../../../interfaces/repositoryInterface';
+import { RepositoryUserData, Response } from '../../../interfaces/userInterface/registerUserInterface';
+import { UserRepository } from '../../../interfaces/userInterface/repositoryInterface';
 import { EmailAlreadyExist } from '../../../error/error';
 
 export class RegisterUsecase {
@@ -10,19 +10,21 @@ export class RegisterUsecase {
         name,
         email, 
         password_hash
-    }:RepositoryUserData){
+    }:RepositoryUserData): Promise<Response>{
 
         const surchForEmail = await this.createUser.findByEmail(email)
 
         if(surchForEmail){
-            throw new EmailAlreadyExist('email já cadastrado na plataforma')
+            throw new EmailAlreadyExist();
         }
 
-        await this.createUser.register({
+       const user = await this.createUser.register({
             name,
             email, 
             password_hash 
-        })
+        });
+
+        return { user }
     }
  
 

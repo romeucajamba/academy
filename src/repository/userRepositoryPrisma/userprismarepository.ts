@@ -1,6 +1,6 @@
 import { connectionBD } from '../../lib/dbconnector';
 import { Prisma } from '@prisma/client';
-import { UserRepository } from '../../interfaces/repositoryInterface';
+import { UserRepository } from '../../interfaces/userInterface/repositoryInterface';
 
 
 export class UserPrismaRepository implements UserRepository {
@@ -11,6 +11,7 @@ export class UserPrismaRepository implements UserRepository {
                 email
             }
         })
+        
         return userEmail
     }
     

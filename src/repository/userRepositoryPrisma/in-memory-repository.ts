@@ -1,5 +1,5 @@
 import { Prisma, Users } from "@prisma/client";
-import { UserRepository } from '../../interfaces/repositoryInterface';
+import { UserRepository } from '../../interfaces/userInterface/repositoryInterface';
 import { string } from "zod";
 
 
