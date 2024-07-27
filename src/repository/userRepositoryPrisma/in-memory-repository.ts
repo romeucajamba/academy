@@ -1,22 +1,32 @@
 import { Prisma, Users } from "@prisma/client";
 import { UserRepository } from '../../interfaces/userInterface/repositoryInterface';
-import { string } from "zod";
 
 
 export class InMemmoryRepository implements UserRepository {
-    public users: any[] = []
-    public emails: string[] = []
+    public users: Users[] = []
 
     async findByEmail(email: string){
         
-        const user = await this.emails.find( emails => emails === email);
-
-        return user
+        const user =  this.users.find( (user)  => user.email == email);
+    
+        if(!user){
+            return null;
+        }
+        
+        return user;
     }
 
     async register(data: Prisma.UsersCreateInput) {
-        const createUser = await this.users.push(data);
+        const user = {
+            id: 'user-1',
+            name: data.name,
+            email: data.email,
+            password_hash: data.password_hash,
+            create_at: new Date(),
+        }
 
-        return createUser
+         this.users.push(user);
+
+        return user
     }
 }

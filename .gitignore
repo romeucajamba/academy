@@ -6,3 +6,4 @@ build
 
 ## Variáveis de ambiente, dados sensíveis
 .env
+coverage

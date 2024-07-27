@@ -2,6 +2,7 @@
 import { RepositoryUserData, Response } from '../../../interfaces/userInterface/registerUserInterface';
 import { UserRepository } from '../../../interfaces/userInterface/repositoryInterface';
 import { EmailAlreadyExist } from '../../../error/error';
+import { hash } from 'bcryptjs';
 
 export class RegisterUsecase {
     constructor(private createUser:UserRepository){}
@@ -9,8 +10,10 @@ export class RegisterUsecase {
     async execute({
         name,
         email, 
-        password_hash
+        password
     }:RepositoryUserData): Promise<Response>{
+
+        const password_hash = await hash(password, 6); 
 
         const surchForEmail = await this.createUser.findByEmail(email)
 

@@ -2,7 +2,6 @@ import { z } from 'zod';
 import { FastifyRequest, FastifyReply  } from 'fastify';
 import { RegisterUsecase } from '../useCase/registerUseCase';
 import { UserPrismaRepository } from '../../../repository/userRepositoryPrisma/userprismarepository';
-import { hash } from 'bcryptjs';
 import { EmailAlreadyExist } from '../../../error/error';
 
 export async function  registerUser(request:FastifyRequest, reply:FastifyReply) {
@@ -14,10 +13,7 @@ export async function  registerUser(request:FastifyRequest, reply:FastifyReply) 
     })
 
     const { name, email, password } = registerBodySchema.parse(request.body)
-    const password_hash = await hash(password, 6) 
-
-
-
+    
     try {
         const prismaRepositoryUser = new UserPrismaRepository()
         const userUsecase = new RegisterUsecase(prismaRepositoryUser)
@@ -25,7 +21,7 @@ export async function  registerUser(request:FastifyRequest, reply:FastifyReply) 
         const createdUser = await userUsecase.execute({
             name,
             email, 
-            password_hash
+            password
         });
 
         return reply.status(201).send({createdUser});
