@@ -18,13 +18,11 @@ export async function  registerUser(request:FastifyRequest, reply:FastifyReply) 
         const prismaRepositoryUser = new UserPrismaRepository()
         const userUsecase = new RegisterUsecase(prismaRepositoryUser)
 
-        const createdUser = await userUsecase.execute({
+        await userUsecase.execute({
             name,
             email, 
             password
         });
-
-        return reply.status(201).send({createdUser});
 
     } catch (err) {
         if(err instanceof EmailAlreadyExist){
@@ -32,7 +30,5 @@ export async function  registerUser(request:FastifyRequest, reply:FastifyReply) 
         }
         throw err
     }
-
-   
-    
+    return reply.status(201).send("Cadastro bem sucedido, seja bem-vindo ✔");
 }

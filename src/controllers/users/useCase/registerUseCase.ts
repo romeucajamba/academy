@@ -1,6 +1,6 @@
 
 import { RepositoryUserData, Response } from '../../../interfaces/userInterface/registerUserInterface';
-import { UserRepository } from '../../../interfaces/userInterface/repositoryInterface';
+import { UserRepository } from '../../../interfaces/userInterface/userRepository';
 import { EmailAlreadyExist } from '../../../error/error';
 import { hash } from 'bcryptjs';
 

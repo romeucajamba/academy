@@ -6,3 +6,9 @@ export class EmailAlreadyExist extends  Error{
         super('e-mail já existe na plataforma')
     }
 }
+
+export class InvalidCredentials extends Error {
+    constructor(){
+        super('❌Invalid credential❗')
+    }
+}

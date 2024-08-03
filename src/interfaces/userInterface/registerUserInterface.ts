@@ -9,3 +9,12 @@ export interface RepositoryUserData{
 export interface Response {
     user: Users
 }
+
+export interface AuthenticateUseCaseRequest {
+    email: string, 
+    password: string 
+}
+
+export interface AuthenticateUseCaseResponse {
+    user: Users
+}

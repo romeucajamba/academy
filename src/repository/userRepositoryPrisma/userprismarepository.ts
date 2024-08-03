@@ -1,6 +1,6 @@
 import { connectionBD } from '../../lib/dbconnector';
 import { Prisma } from '@prisma/client';
-import { UserRepository } from '../../interfaces/userInterface/repositoryInterface';
+import { UserRepository } from '../../interfaces/userInterface/userRepository';
 
 
 export class UserPrismaRepository implements UserRepository {

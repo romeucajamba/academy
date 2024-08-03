@@ -1,5 +1,5 @@
 import { Prisma, Users } from "@prisma/client";
-import { UserRepository } from '../../interfaces/userInterface/repositoryInterface';
+import { UserRepository } from '../../interfaces/userInterface/userRepository';
 
 
 export class InMemmoryRepository implements UserRepository {
