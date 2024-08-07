@@ -1,8 +1,7 @@
 import { z } from 'zod';
 import { FastifyRequest, FastifyReply  } from 'fastify';
-import { RegisterUsecase } from '../useCase/registerUseCase';
-import { UserPrismaRepository } from '../../../repository/userRepositoryPrisma/userprismarepository';
 import { EmailAlreadyExist } from '../../../error/error';
+import { makeRegisterUseCase } from "../fatcories/make-register-use-case";
 
 export async function  registerUser(request:FastifyRequest, reply:FastifyReply) {
 
@@ -10,15 +9,13 @@ export async function  registerUser(request:FastifyRequest, reply:FastifyReply) 
         name: z.string(),
         email: z.string().email(),
         password: z.string().min(6)
-    })
+    });
 
-    const { name, email, password } = registerBodySchema.parse(request.body)
+    const { name, email, password } = registerBodySchema.parse(request.body);
     
     try {
-        const prismaRepositoryUser = new UserPrismaRepository()
-        const userUsecase = new RegisterUsecase(prismaRepositoryUser)
-
-        await userUsecase.execute({
+        const registerUserUsecase = makeRegisterUseCase()
+        await registerUserUsecase.execute({
             name,
             email, 
             password
@@ -26,7 +23,7 @@ export async function  registerUser(request:FastifyRequest, reply:FastifyReply) 
 
     } catch (err) {
         if(err instanceof EmailAlreadyExist){
-            return reply.status(409).send({message: err.message})
+            return reply.status(409).send({message: err.message});
         }
         throw err
     }

@@ -1,7 +1,7 @@
 
-import { RepositoryUserData, Response } from '../../../interfaces/userInterface/registerUserInterface';
-import { UserRepository } from '../../../interfaces/userInterface/userRepository';
-import { EmailAlreadyExist } from '../../../error/error';
+import { RepositoryUserData, Response } from '../../interfaces/userInterface/registerUserInterface';
+import { UserRepository } from '../../interfaces/userInterface/userRepository';
+import { EmailAlreadyExist } from '../../error/error';
 import { hash } from 'bcryptjs';
 
 export class RegisterUsecase {
