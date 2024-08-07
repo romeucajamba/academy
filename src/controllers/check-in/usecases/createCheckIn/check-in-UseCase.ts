@@ -1,10 +1,10 @@
-import { CheckinRepository } from "../../interfaces/checkinInterfaces/checkinRepository";
-import { CheckinUseCaseRequest, CheckinUseCaseResponse } from "../../interfaces/checkinInterfaces/chenckinInterface";
-import { UserRepository } from "../../interfaces/userInterface/userRepository";
-import { BadError, ResourceNotFoundError } from "../../error/error";
-import { GymRepository } from "../../interfaces/gym/gymRepository";
-import { getDistanceBetweenCordenates } from "../../utils/get-distance-between-coordenate";
-import {  IvalidAcessInAcademy } from "../../error/error";
+import { CheckinRepository } from "../../../../interfaces/checkinInterfaces/checkinRepository";
+import { CheckinUseCaseRequest, CheckinUseCaseResponse } from "../../../../interfaces/checkinInterfaces/chenckinInterface";
+import { UserRepository } from "../../../../interfaces/userInterface/userRepository";
+import { BadError, ResourceNotFoundError } from "../../../../error/error";
+import { GymRepository } from "../../../../interfaces/gymInterface/gymRepository";
+import { getDistanceBetweenCordenates } from "../../../../utils/get-distance-between-coordenate";
+import {  IvalidAcessInAcademy } from "../../../../error/error";
 
 export class CheckInUseCase {
     constructor(

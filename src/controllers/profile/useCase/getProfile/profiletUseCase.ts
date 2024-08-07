@@ -1,6 +1,6 @@
-import { UserRepository } from "../../interfaces/userInterface/userRepository";
-import { Response } from "../../interfaces/userInterface/registerUserInterface";
-import { ResourceNotFoundError } from "../../error/error";
+import { UserRepository } from "../../../../interfaces/userInterface/userRepository";
+import { Response } from "../../../../interfaces/userInterface/registerUserInterface";
+import { ResourceNotFoundError } from "../../../../error/error";
 
 interface UserId{
     userId: string

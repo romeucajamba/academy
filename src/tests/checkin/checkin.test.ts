@@ -1,7 +1,7 @@
 import {afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { CheckInInMemmoryRepository } from "../../repository/checkinRepository/in-memory-checkin-repository";
 import { GymsInMemmoryGymRepository } from "../../repository/gymRepository/in-memory-repository";
-import { CheckInUseCase } from "../../controllers/check-in/check-in-UseCase";
+import { CheckInUseCase } from "../../controllers/check-in/usecases/createCheckIn/check-in-UseCase";
 import {  } from "../../repository/gymRepository/in-memory-repository";
 import { BadError } from "../../error/error";
 import { Decimal } from "@prisma/client/runtime/library";
@@ -15,7 +15,7 @@ describe("Chekin use case", async () => {
         checkInRepsotory = new  CheckInInMemmoryRepository()
         gymMemoryRepository = new GymsInMemmoryGymRepository();
 
-        gymMemoryRepository.gyms.push({
+        gymMemoryRepository.create({
             id: 'gym-01',
             title: "Academia Treinar com garra",
             descriptions: "Vem treinar com bons fisoculturistas",
@@ -89,8 +89,8 @@ describe("Chekin use case", async () => {
     test("It should  not be able to chek in on distant gym", async () => {
         const sut = new CheckInUseCase(checkInRepsotory, gymMemoryRepository);
 
-        gymMemoryRepository.gyms.push({
-            id: 'gym-02',
+        gymMemoryRepository.create({
+            id:'gym-02',
             title: "Academia Treinar com garra e peso",
             descriptions: "Vem treinar com bons fisoculturistas",
             phone: "943558106",

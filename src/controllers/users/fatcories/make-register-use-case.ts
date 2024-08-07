@@ -1,4 +1,4 @@
-import { RegisterUsecase } from '../registerUseCase';
+import { RegisterUsecase } from '../useCases/registerUseCase';
 import { UserPrismaRepository } from '../../../repository/userRepositoryPrisma/UserRepository/userprismarepository';
 
 export function makeRegisterUseCase(){

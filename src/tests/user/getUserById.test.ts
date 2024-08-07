@@ -1,6 +1,6 @@
 import {describe, expect, test } from "vitest";
 import { InMemmoryRepository } from "../../repository/userRepositoryPrisma/UserRepository/in-memory-repository";
-import { GetUserProfileUseCase } from "../../controllers/profile/profiletUseCase";
+import { GetUserProfileUseCase } from "../../controllers/profile/useCase/getProfile/profiletUseCase";
 import { hash } from "bcryptjs";
 import { ResourceNotFoundError } from "../../error/error";
 

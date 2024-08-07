@@ -1,4 +1,4 @@
-import { AuthenticateUseCase } from '../authenticateUseCase';
+import { AuthenticateUseCase } from '../useCases/authenticateUseCase';
 import { UserPrismaRepository } from '../../../repository/userRepositoryPrisma/UserRepository/userprismarepository';
 
 export function makeAuthenticateUseCase(){

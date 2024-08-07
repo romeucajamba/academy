@@ -20,7 +20,7 @@ Sistema para cadastro de usuário em academia, dando a possibilidade a visualiza
 - [ ] Deve ser possível os usuários buscarem por academias pelo nome;
 - [✔] Deve ser possível o usuário realizar chack-in numa academia;
 - [ ]  Deve ser possível validar o check-in de usuários
-- [ ] Deve ser possível cadastrar uma academia;
+- [✔] Deve ser possível cadastrar uma academia;
 
 
 ## Requisitos não funcionais

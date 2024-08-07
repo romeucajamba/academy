@@ -1,6 +1,6 @@
-import { UserRepository } from "../../interfaces/userInterface/userRepository";
-import { AuthenticateUseCaseRequest, AuthenticateUseCaseResponse } from "../../interfaces/userInterface/registerUserInterface";
-import { InvalidCredentials } from "../../error/error";
+import { UserRepository } from "../../../interfaces/userInterface/userRepository";
+import { AuthenticateUseCaseRequest, AuthenticateUseCaseResponse } from "../../../interfaces/userInterface/registerUserInterface";
+import { InvalidCredentials } from "../../../error/error";
 import { compare } from "bcryptjs";
 
 export class AuthenticateUseCase {
