@@ -19,7 +19,7 @@ export class GymUsecase {
             phone,
             latitude,
             longitude
-        })
+        });
 
         return { gym }
     } 
