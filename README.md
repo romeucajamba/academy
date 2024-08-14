@@ -16,8 +16,8 @@ Sistema para cadastro de usuário em academia, dando a possibilidade a visualiza
 - [✔] Deve ser possível obter os dados de um usário logado;
 - [✔] Deve ser possível obter o número de chack-in realizados pelo usuário;
 - [✔] Deve ser possível os usuários obter o histórico de check-ins;
-- [ ] Deve ser possível os usuários buscarem academias próximas;
-- [ ] Deve ser possível os usuários buscarem por academias pelo nome;
+- [✔] Deve ser possível os usuários buscarem academias próximas;
+- [✔] Deve ser possível os usuários buscarem por academias pelo nome;
 - [✔] Deve ser possível o usuário realizar chack-in numa academia;
 - [ ]  Deve ser possível validar o check-in de usuários
 - [✔] Deve ser possível cadastrar uma academia;

@@ -11,3 +11,21 @@ export interface GymRequest {
 export interface GymResponse {
     gym: Gym
 }
+
+export interface SearchGymRequest {
+    query: string,
+    page: number
+}
+
+export interface GymsResponse {
+    getGyms: Gym[]
+}
+
+export interface NearGymRequest {
+    userLatitude: number,
+    userLongitude: number
+}
+
+export interface NearGymResponse {
+    getNearGyms: Gym[]
+}

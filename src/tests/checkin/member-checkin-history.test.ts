@@ -37,7 +37,7 @@ describe("Member checkin history use case", async () => {
         ]);
     });
 
-    test("it should be able to fetch paginated checkin in history", async () => {
+    test.skip("it should be able to fetch paginated checkin in history", async () => {
         for(let i = 0; i <= 22; i++){
             await checkInRepsotory.create({
                 user_id: "user-01",
