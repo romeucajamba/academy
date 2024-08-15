@@ -6,7 +6,7 @@ Sistema para cadastro de usuário em academia, dando a possibilidade a visualiza
 - [✔] O usuário não deve poder se cadastrar com o e-mail já cadastrado no sistema;
 - [✔] O usuário não deve fazer dois check-ins ou mais no mesmo dia;
 - [✔] O usuário não pode fazer chack-in se não estiver a 100 metros da academia;
-- [✔] O check-in só pode ser validado até 20 minutos depois de ser criado
+- [ ] O check-in só pode ser validado até 20 minutos depois de ser criado
 - [ ] O check-in só pode ser validado por administradores;
 - [ ] A academia só pode ser cadastrada por administradores;
 
@@ -19,7 +19,7 @@ Sistema para cadastro de usuário em academia, dando a possibilidade a visualiza
 - [✔] Deve ser possível os usuários buscarem academias próximas;
 - [✔] Deve ser possível os usuários buscarem por academias pelo nome;
 - [✔] Deve ser possível o usuário realizar chack-in numa academia;
-- [ ]  Deve ser possível validar o check-in de usuários
+- [✔]  Deve ser possível validar o check-in de usuários
 - [✔] Deve ser possível cadastrar uma academia;
 
 

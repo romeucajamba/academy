@@ -32,3 +32,12 @@ export interface GetMetricRequest {
 export interface ResponseMetrics {
     checkinsTotal: number
 }
+
+export interface ValidateCheckInRequest {
+    checkInId: string
+}
+
+
+export interface ValidateCheckInResponse {
+    checkIn: Checkin | null
+}

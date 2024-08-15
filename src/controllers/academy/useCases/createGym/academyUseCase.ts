@@ -2,7 +2,7 @@
 import { GymRequest, GymResponse } from '../../../../interfaces/gymInterface/gymInterface';
 import { GymRepository } from '../../../../interfaces/gymInterface/gymRepository';
 
-export class GymUsecase {
+export class GymUseCase {
     constructor(private academRepository: GymRepository){}
 
     async execute({
