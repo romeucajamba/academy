@@ -1,16 +1,16 @@
 import {describe, expect, test } from "vitest";
-import {GymUsecase} from "../../controllers/academy/useCases/createGym/academyUseCase";
+import { GymUseCase} from "../../controllers/academy/useCases/createGym/academyUseCase";
 import { GymsInMemmoryGymRepository} from "../../repository/gymRepository/in-memory-repository";
 import { beforeEach } from "node:test";
 
 let gymRepository: GymsInMemmoryGymRepository;
-let sut: GymUsecase
+let sut: GymUseCase
 
 describe("Create gym Use Case", async () => {
 
     beforeEach(() => {
         gymRepository = new GymsInMemmoryGymRepository()
-        sut = new GymUsecase(gymRepository)
+        sut = new GymUseCase(gymRepository)
     });
 
     test.skip("It should be able create gym", async () => {

@@ -1,7 +1,7 @@
 import {describe, expect, test } from "vitest";
 import {RegisterUsecase} from "../../controllers/users/useCases/registerUseCase";
-import { UserPrismaRepository} from "../../repository/userRepositoryPrisma/UserRepository/userprismarepository";
-import { InMemmoryRepository } from "../../repository/userRepositoryPrisma/UserRepository/in-memory-repository";
+import { UserPrismaRepository} from "../../repository/userRepository/userprismarepository";
+import { InMemmoryRepository } from "../../repository/userRepository/in-memory-repository";
 import { compare } from "bcryptjs";
 import { EmailAlreadyExist } from "../../error/error"
 

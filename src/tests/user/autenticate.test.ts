@@ -1,6 +1,6 @@
 import {describe, expect, test } from "vitest";
 import { AuthenticateUseCase } from "../../controllers/authenticate/useCases/authenticateUseCase";
-import { InMemmoryRepository } from "../../repository/userRepositoryPrisma/UserRepository/in-memory-repository";
+import { InMemmoryRepository } from "../../repository/userRepository/in-memory-repository";
 import { hash } from "bcryptjs";
 import { InvalidCredentials } from "../../error/error";
 
