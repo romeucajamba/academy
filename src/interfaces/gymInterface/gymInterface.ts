@@ -3,7 +3,7 @@ import { Gym } from "@prisma/client"
 export interface GymRequest {
     title: string,
     descriptions: string | null
-    phone: string,
+    phone: string | null,
     latitude: number,
     longitude: number
 }
