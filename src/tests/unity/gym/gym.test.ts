@@ -1,6 +1,6 @@
 import {describe, expect, test } from "vitest";
-import { GymUseCase} from "../../controllers/academy/useCases/createGym/academyUseCase";
-import { GymsInMemmoryGymRepository} from "../../repository/gymRepository/in-memory-repository";
+import { GymUseCase} from "../../../controllers/academy/useCases/createGym/academyUseCase";
+import { GymsInMemmoryGymRepository} from "../../../repository/gymRepository/in-memory-repository";
 import { beforeEach } from "node:test";
 
 let gymRepository: GymsInMemmoryGymRepository;

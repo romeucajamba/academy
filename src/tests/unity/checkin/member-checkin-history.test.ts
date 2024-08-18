@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, test } from "vitest";
-import { CheckInInMemmoryRepository } from "../../repository/checkinRepository/in-memory-checkin-repository";
-import { FetchUserCheckinHistoryUseCase } from "../../controllers/check-in/usecases/checkIn_history/member-checkin-history";
-import {  ResourceNotFoundError } from "../../error/error";
+import { CheckInInMemmoryRepository } from "../../../repository/checkinRepository/in-memory-checkin-repository";
+import { FetchUserCheckinHistoryUseCase } from "../../../controllers/check-in/usecases/checkIn_history/member-checkin-history";
+import {  ResourceNotFoundError } from "../../../error/error";
 
 let checkInRepsotory: CheckInInMemmoryRepository;
 let sut: FetchUserCheckinHistoryUseCase

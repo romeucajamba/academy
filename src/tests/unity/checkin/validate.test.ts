@@ -1,7 +1,7 @@
 import {afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import { CheckInInMemmoryRepository } from "../../repository/checkinRepository/in-memory-checkin-repository";
-import { ValidateChackInUseCase } from "../../controllers/check-in/usecases/validateCheckIn/validate-checkins";
-import { ResourceNotFoundError } from "../../error/error";
+import { CheckInInMemmoryRepository } from "../../../repository/checkinRepository/in-memory-checkin-repository";
+import { ValidateChackInUseCase } from "../../../controllers/check-in/usecases/validateCheckIn/validate-checkins";
+import { ResourceNotFoundError } from "../../../error/error";
 
 let sut: ValidateChackInUseCase;
 let checkInRepsotory : CheckInInMemmoryRepository;

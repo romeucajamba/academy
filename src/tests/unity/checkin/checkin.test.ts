@@ -1,11 +1,11 @@
 import {afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import { CheckInInMemmoryRepository } from "../../repository/checkinRepository/in-memory-checkin-repository";
-import { GymsInMemmoryGymRepository } from "../../repository/gymRepository/in-memory-repository";
-import { CheckInUseCase } from "../../controllers/check-in/usecases/createCheckIn/check-in-UseCase";
-import {  } from "../../repository/gymRepository/in-memory-repository";
-import { BadError } from "../../error/error";
+import { CheckInInMemmoryRepository } from "../../../repository/checkinRepository/in-memory-checkin-repository";
+import { GymsInMemmoryGymRepository } from "../../../repository/gymRepository/in-memory-repository";
+import { CheckInUseCase } from "../../../controllers/check-in/usecases/createCheckIn/check-in-UseCase";
+import {  } from "../../../repository/gymRepository/in-memory-repository";
+import { BadError } from "../../../error/error";
 import { Decimal } from "@prisma/client/runtime/library";
-import {  IvalidAcessInAcademy } from "../../error/error";
+import {  IvalidAcessInAcademy } from "../../../error/error";
 
 let checkInRepsotory: CheckInInMemmoryRepository;
 let gymMemoryRepository: GymsInMemmoryGymRepository;

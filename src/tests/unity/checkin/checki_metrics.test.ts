@@ -1,6 +1,6 @@
 import {afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import { CheckInInMemmoryRepository } from "../../repository/checkinRepository/in-memory-checkin-repository";
-import { GetUserMetricsUseCase } from "../../controllers/check-in/usecases/getUserCheckinMetrics/getCheckinsMetrics";
+import { CheckInInMemmoryRepository } from "../../../repository/checkinRepository/in-memory-checkin-repository";
+import { GetUserMetricsUseCase } from "../../../controllers/check-in/usecases/getUserCheckinMetrics/getCheckinsMetrics";
 
 let sut: GetUserMetricsUseCase;
 let checkInRepsotory : CheckInInMemmoryRepository;

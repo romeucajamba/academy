@@ -1,8 +1,8 @@
 import {describe, expect, test } from "vitest";
-import { AuthenticateUseCase } from "../../controllers/authenticate/useCases/authenticateUseCase";
-import { InMemmoryRepository } from "../../repository/userRepository/in-memory-repository";
+import { AuthenticateUseCase } from "../../../controllers/authenticate/useCases/authenticateUseCase";
+import { InMemmoryRepository } from "../../../repository/userRepository/in-memory-repository";
 import { hash } from "bcryptjs";
-import { InvalidCredentials } from "../../error/error";
+import { InvalidCredentials } from "../../../error/error";
 
 describe("Authenticate use case", async () => {
     test.skip("It should be able authenticate user", async () => {

@@ -10,7 +10,13 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "test:academye2e": "vitest run --dir src/controllers/academy/http",
+    "test:authe2e": "vitest run --dir src/controllers/authenticate/http",
+    "test:checke2e": "vitest run --dir src/controllers/check-in/http",
+    "test:profilee2e": "vitest run --dir src/controllers/profile/http",
+    "test:userse2e": "vitest run --dir src/controllers/users/http",
+    "pretest:e2e": "vitest run-s cd prisma/vitest-environment-prisma && npm link"
   },
   "repository": {
     "type": "git",
@@ -29,6 +35,7 @@
     "@vitest/ui": "2.0.4",
     "eslint": "9.4.0",
     "globals": "15.4.0",
+    "npm-run-all": "4.1.5",
     "prisma": "5.15.0",
     "tsup": "^8.1.0",
     "tsx": "^4.14.0",

@@ -1,8 +1,8 @@
 import {describe, expect, test } from "vitest";
-import { InMemmoryRepository } from "../../repository/userRepository/in-memory-repository";
-import { GetUserProfileUseCase } from "../../controllers/profile/useCase/getProfile/profiletUseCase";
+import { InMemmoryRepository } from "../../../repository/userRepository/in-memory-repository";
+import { GetUserProfileUseCase } from "../../../controllers/profile/useCase/getProfile/profiletUseCase";
 import { hash } from "bcryptjs";
-import { ResourceNotFoundError } from "../../error/error";
+import { ResourceNotFoundError } from "../../../error/error";
 
 describe("Profile use case", async () => {
 

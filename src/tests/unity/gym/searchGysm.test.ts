@@ -1,6 +1,6 @@
 import { describe, test, beforeEach, expect } from "vitest";
-import { SearchGymUseCase } from "../../controllers/academy/useCases/getGym/search_gyms";
-import { GymsInMemmoryGymRepository } from "../../repository/gymRepository/in-memory-repository";
+import { SearchGymUseCase } from "../../../controllers/academy/useCases/getGym/search_gyms";
+import { GymsInMemmoryGymRepository } from "../../../repository/gymRepository/in-memory-repository";
 
 let gymRepository: GymsInMemmoryGymRepository;
 let sut : SearchGymUseCase;

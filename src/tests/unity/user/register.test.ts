@@ -1,9 +1,9 @@
 import {describe, expect, test } from "vitest";
-import {RegisterUsecase} from "../../controllers/users/useCases/registerUseCase";
-import { UserPrismaRepository} from "../../repository/userRepository/userprismarepository";
-import { InMemmoryRepository } from "../../repository/userRepository/in-memory-repository";
+import {RegisterUsecase} from "../../../controllers/users/useCases/registerUseCase";
+import { UserPrismaRepository} from "../../../repository/userRepository/userprismarepository";
+import { InMemmoryRepository } from "../../../repository/userRepository/in-memory-repository";
 import { compare } from "bcryptjs";
-import { EmailAlreadyExist } from "../../error/error"
+import { EmailAlreadyExist } from "../../../error/error"
 
 describe("Register use case", async () => {
     test.skip("Should be able register user", async () => {
