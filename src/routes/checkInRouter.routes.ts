@@ -8,7 +8,7 @@ import { valideteCheckIn } from "../controllers/check-in/http/validateCheckin";
 export async function checkInRouter(app:FastifyInstance){
     app.addHook('onRequest', verifyJWT);
     app.post('/gyms/:gymId/checkIn', createCheckin);
-    app.get('checkin/history', checkInHistory);
-    app.get('checkin/metrics', checkInMetrics);
-    app.patch('checkin/:checkinId/validate', valideteCheckIn)
+    app.get('/checkin/history', checkInHistory);
+    app.get('/checkin/metrics', checkInMetrics);
+    app.patch('/checkin/:checkinId/validate', valideteCheckIn)
 }
