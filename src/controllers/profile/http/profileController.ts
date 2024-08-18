@@ -1,8 +1,18 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { z } from "zod";
-
+import { userprofileUseCase } from "../factories/profiletFactory";
 
 export async function profileController(request: FastifyRequest, reply: FastifyReply){
-    await request.jwtVerify()
-    console.log(request.user.sub)
+
+    const getUserProfile = userprofileUseCase();
+    
+    const {  user } = await getUserProfile.execute({
+        userId: request.user.sub
+    });
+
+    return reply.status(200).send({
+        user: {
+            ...user,
+            password_hash: undefined
+        }
+    });
 }
