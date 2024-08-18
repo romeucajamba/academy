@@ -8,5 +8,5 @@ export async function gymsRouter(app:FastifyInstance){
     app.addHook('onRequest', verifyJWT);
     app.post('/gyms', createAcademy)
     app.get('/gysms/search', getAcademy);
-    app.get('/gyms', getNearAcademy);
+    app.get('/gyms/near-gyms', getNearAcademy);
 }

@@ -12,7 +12,7 @@ export async function getNearAcademy(request: FastifyRequest, reply: FastifyRepl
         }),
     });
 
-    const { latitude, longitude} = nearAcademySchema.parse(request.body);
+    const { latitude, longitude} = nearAcademySchema.parse(request.query);
     
     const nearAcademy = getNearGymUseCase();
  
