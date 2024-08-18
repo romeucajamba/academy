@@ -16,7 +16,9 @@
     "test:checke2e": "vitest run --dir src/controllers/check-in/http",
     "test:profilee2e": "vitest run --dir src/controllers/profile/http",
     "test:userse2e": "vitest run --dir src/controllers/users/http",
-    "pretest:e2e": "vitest run-s cd prisma/vitest-environment-prisma && npm link"
+    "test:create-prisma-environment":"npm link ./prisma/vitest-enviroment-prisma",
+    "test:install-prisma-environment":"npm link vitest-enviroment-prisma",
+    "pretest:e2e": "run-s test:create-prisma-environment test:install-prisma-environment"
   },
   "repository": {
     "type": "git",
