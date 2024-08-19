@@ -5,7 +5,7 @@ import { getGymUseCase } from "../factories/getGymFactory";
 export async function getAcademy(request: FastifyRequest, reply: FastifyReply){
     const saerchAcademySchema = z.object({
         query: z.string(),
-        page: z.coerce.number().min(1).default(1)
+        page: z.number().min(1).default(1)
     });
 
     const {query, page} = saerchAcademySchema.parse(request.body);

@@ -4,15 +4,15 @@ import { getNearGymUseCase } from "../factories/getNearGymsFactory";
 
 export async function getNearAcademy(request: FastifyRequest, reply: FastifyReply){
     const nearAcademySchema = z.object({
-        latitude: z.coerce.number().refine((value)  => {
+        latitude: z.number().refine((value)  => {
             return Math.abs(value) <= 90
         }),
-        longitude: z.coerce.number().refine((value)  => {
+        longitude: z.number().refine((value)  => {
             return Math.abs(value) <= 180
         }),
     });
 
-    const { latitude, longitude} = nearAcademySchema.parse(request.query);
+    const { latitude, longitude} = nearAcademySchema.parse(request.body);
     
     const nearAcademy = getNearGymUseCase();
  

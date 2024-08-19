@@ -28,5 +28,5 @@ export async function createCheckin(request: FastifyRequest, reply: FastifyReply
         userLongitude:longitude
     })
     
-    return reply.status(201).send("Academia criada com sucesso✔")
+    return reply.status(201).send("Check In criado com sucesso ✔")
 }

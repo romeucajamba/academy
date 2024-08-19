@@ -10,5 +10,5 @@ export async function checkInRouter(app:FastifyInstance){
     app.post('/gyms/:gymId/checkIn', createCheckin);
     app.get('/checkin/history', checkInHistory);
     app.get('/checkin/metrics', checkInMetrics);
-    app.patch('/checkin/:checkinId/validate', valideteCheckIn)
+    app.patch('/checkin/:checkInId/validate', valideteCheckIn)
 }
