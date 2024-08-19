@@ -5,12 +5,23 @@ import { checkInRouter } from "./routes/checkInRouter.routes";
 import { UserRouter } from "./routes/userRoute.routes";
 import { gymsRouter } from "./routes/gymsRouter.routes";
 import fastifyJwt from "@fastify/jwt";
+import fastifyCookie from "@fastify/cookie";
 
 export const app = fastify();
 
 app.register(fastifyJwt, {
     secret: env.JWT_SECRET,
-})
+    cookie:{
+        cookieName: 'refreshToken',
+        signed: false
+    },
+
+    sign: {
+        expiresIn: '10m'
+    }
+});
+
+app.register(fastifyCookie);
 app.register(UserRouter);
 app.register(gymsRouter);
 app.register(checkInRouter);
