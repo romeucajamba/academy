@@ -8,7 +8,7 @@ export async function getAcademy(request: FastifyRequest, reply: FastifyReply){
         page: z.coerce.number().min(1).default(1)
     });
 
-    const {query, page} = saerchAcademySchema.parse(request.query);
+    const {query, page} = saerchAcademySchema.parse(request.body);
     
     const searchAcademy = getGymUseCase();
  
