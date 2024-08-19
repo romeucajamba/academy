@@ -35,7 +35,7 @@ export async function  AutenticateUser(request:FastifyRequest, reply:FastifyRepl
             }
         )
         return reply
-            .setCookie('refeshToken', refreshToken, {
+            .setCookie('refreshToken', refreshToken, {
                 path: '/', //Todas as rotas podem ler esse cookie
                 secure: true, // o cookie vai ser encriptado no nosso https se estivermos a usar o https no servidor, o front não vai conseguir ler
                 sameSite: true, //O cookie só será acessível dentro do mesmo domínio
