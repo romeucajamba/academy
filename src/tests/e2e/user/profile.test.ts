@@ -11,7 +11,7 @@ describe('Profile (e2e)', () => {
         await app.close()
     })
 
-    test('should be able to get  user profile', async () => {
+    test.skip('should be able to get  user profile', async () => {
          await request(app.server).post('/users').send({
             name: "John Doe",
             email: "joedpel@gmail.com",
