@@ -30,7 +30,7 @@ describe("Chekin use case", async () => {
         vi.useRealTimers()
     });
 
-    test.skip("It should be able to create chek in", async () => {
+    test("It should be able to create chek in", async () => {
         const sut = new CheckInUseCase(checkInRepsotory, gymMemoryRepository);
 
         const { checkin } = await  sut.execute({
@@ -43,7 +43,7 @@ describe("Chekin use case", async () => {
         expect(checkin.id).toEqual(expect.any(String));
     });
     
-    test.skip("It should not be able to chek in twince in the same day", async () => {
+    test("It should not be able to chek in twince in the same day", async () => {
         const sut = new CheckInUseCase(checkInRepsotory, gymMemoryRepository);
 
         vi.setSystemTime(new Date(2024, 0, 20, 8, 0, 0))
@@ -63,7 +63,7 @@ describe("Chekin use case", async () => {
         })).rejects.toBeInstanceOf(BadError);
     });
 
-    test.skip("It should be able to chek in twince in diferent day", async () => {
+    test("It should be able to chek in twince in diferent day", async () => {
         const sut = new CheckInUseCase(checkInRepsotory, gymMemoryRepository);
 
         vi.setSystemTime(new Date(2024, 0, 20, 8, 0, 0))
@@ -86,7 +86,7 @@ describe("Chekin use case", async () => {
 
         expect(checkin.id).toEqual(expect.any(String));
     });
-    test.skip("It should  not be able to chek in on distant gym", async () => {
+    test("It should  not be able to chek in on distant gym", async () => {
         const sut = new CheckInUseCase(checkInRepsotory, gymMemoryRepository);
 
         gymMemoryRepository.create({

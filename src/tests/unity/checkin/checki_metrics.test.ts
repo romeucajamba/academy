@@ -1,4 +1,4 @@
-import {afterEach, beforeEach, describe, expect, test, vi } from "vitest";
+import { beforeEach, describe, expect, test, vi } from "vitest";
 import { CheckInInMemmoryRepository } from "../../../repository/checkinRepository/in-memory-checkin-repository";
 import { GetUserMetricsUseCase } from "../../../controllers/check-in/usecases/getUserCheckinMetrics/getCheckinsMetrics";
 
@@ -12,7 +12,7 @@ describe("Chekin use case", async () => {
 
     });
 
-    test.skip("It should be able to get check ins count chek in from metrics", async () => {
+    test("It should be able to get check ins count chek in from metrics", async () => {
 
         await checkInRepsotory.create({
             user_id: "user-01",

@@ -11,7 +11,7 @@ describe('Authenticate (e2e)', () => {
         await app.close()
     })
 
-    test.skip('should be able to authenticate', async () => {
+    test('should be able to authenticate', async () => {
         await request(app.server).post('/users').send({
             name: "John Doe",
             email: "joedpel@gmail.com",
