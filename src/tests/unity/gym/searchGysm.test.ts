@@ -11,7 +11,7 @@ describe('Serach Gyms use case', async () => {
         sut = new SearchGymUseCase(gymRepository)
     });
 
-    test.skip("it should be able to search for gyms", async () => {
+    test("it should be able to search for gyms", async () => {
         await gymRepository.create({
             title: "Fitness",
             descriptions: "Academia Obros Grossos",
@@ -39,7 +39,7 @@ describe('Serach Gyms use case', async () => {
         ]);
     })
 
-    test.skip("it should be able to search for gyms", async () => {
+    test("it should be able to search for gyms", async () => {
         for(let i = 0; i <= 22; i++){
             await gymRepository.create({
                 title: `Javascript Gym ${i}`,

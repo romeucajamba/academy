@@ -13,7 +13,7 @@ describe("Create gym Use Case", async () => {
         sut = new GymUseCase(gymRepository)
     });
 
-    test.skip("It should be able create gym", async () => {
+    test("It should be able create gym", async () => {
 
        const { gym } = await  sut.execute({
              title: "Gym Fitness",

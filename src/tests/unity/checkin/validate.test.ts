@@ -13,7 +13,7 @@ describe("Chekin use case", async () => {
 
     });
 
-    test.skip("It should be able to validate check ins", async () => {
+    test("It should be able to validate check ins", async () => {
 
         const createdCheckin = await checkInRepsotory.create({
             user_id: "user-01",
@@ -27,7 +27,7 @@ describe("Chekin use case", async () => {
         expect(checkIn?.validatedAt ).toEqual(expect.any(Date));
     });
 
-    test.skip("It should be able to not validate inexistent check-in", async () => {
+    test("It should be able to not validate inexistent check-in", async () => {
 
         expect( () => sut.execute({
             checkInId: "Inexistent check-in",
