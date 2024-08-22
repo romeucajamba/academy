@@ -27,4 +27,4 @@ Sistema para cadastro de usuário em academia, dando a possibilidade a visualiza
 - [✔] A senha do usuário precisa estar criptografada;
 - [✔] Os dados da aplicação precisam estar persistidos em um banco de dados PostgreSQL;
 - [✔] Todas listas de dados precisam estar paginadas com 20 itens por página;
-- [ ] O usuário deve ser identificado por um JWT(Json web Token)
+- [✔] O usuário deve ser identificado por um JWT(Json web Token)
