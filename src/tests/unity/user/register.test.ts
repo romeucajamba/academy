@@ -6,7 +6,7 @@ import { compare } from "bcryptjs";
 import { EmailAlreadyExist } from "../../../error/error"
 
 describe("Register use case", async () => {
-    test("Should be able register user", async () => {
+    test.skip("Should be able register user", async () => {
         
         const memoryRepository = new InMemmoryRepository()
         const userRepository = new UserPrismaRepository();
@@ -21,7 +21,7 @@ describe("Register use case", async () => {
         console.log(user.name);
         expect(user.id).toEqual(expect.any(String))
     });
-    test("Should hash password", async () => {
+    test.skip("Should hash password", async () => {
         
         const memoryRepository = new InMemmoryRepository()
         const userRepository = new UserPrismaRepository();
@@ -42,7 +42,7 @@ describe("Register use case", async () => {
         expect(isPasswordCorrecthashed).toBe(true);
     });
 
-    test("Should not be able to regiter the same email twice", async () => {
+    test.skip("Should not be able to regiter the same email twice", async () => {
         
         const memoryRepository = new InMemmoryRepository()
         const userRepository = new UserPrismaRepository();

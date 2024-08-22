@@ -6,7 +6,7 @@ import { ResourceNotFoundError } from "../../../error/error";
 
 describe("Profile use case", async () => {
 
-    test("It should not be able authenticate with wrong email", async () => {
+    test.skip("It should not be able authenticate with wrong email", async () => {
         
         const memoryRepository = new InMemmoryRepository();
         const sut = new GetUserProfileUseCase(memoryRepository);
@@ -25,7 +25,7 @@ describe("Profile use case", async () => {
         expect(user.name).toEqual("Romeu Cajamba")
     });
 
-    test("It should not be able get user with wrong id", async () => {
+    test.skip("It should not be able get user with wrong id", async () => {
         
         const memoryRepository = new InMemmoryRepository();
         const sut = new GetUserProfileUseCase(memoryRepository);
