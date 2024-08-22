@@ -1,20 +1,20 @@
-name: Run uniti test
+name: Run unity test
 
-## Toda vez que um usuário fazer push, a gente vai executar uma sequência de tarefas
+## Toda vez que um usuário fizer push, a gente vai executar uma sequência de tarefas
 on: [push]
 
 jobs:
-  run-uinty-test:
-  name: Run unity test
-  runs-on: ubuntu-latest #vai executar os testes unitarios da minha aplicação no ambuiente linux, a última versão
-  #nos steps eu falo o que quero que minha aplicação execute
-  steps:
-    - uses: actions/checkout@v3 #vai baixar o código na máquina
+  run-unity-test:  # Corrigi o nome do job para 'run-unity-test'
+    name: Run unity test
+    runs-on: ubuntu-latest  # Vai executar os testes unitários da minha aplicação no ambiente Linux, a última versão
+    # Nos steps eu falo o que quero que minha aplicação execute
+    steps:
+      - uses: actions/checkout@v3  # Vai baixar o código na máquina
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 22
-        cache: 'npm'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 22
+          cache: 'npm'
 
-    - run: npm ci
-    - run: npm run test
+      - run: npm ci
+      - run: npm run test
