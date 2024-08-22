@@ -20,11 +20,17 @@ model Users {
   email String @unique
   password_hash String
   createdAt DateTime @default(now())
+  role Role @default(MEMBER)
 
   checkIns Checkin[]
 
 
   @@map("users")
+}
+
+enum Role {
+  ADMIN
+  MEMBER
 }
 
 model Checkin {
